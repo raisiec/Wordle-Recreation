@@ -1,0 +1,19 @@
+First Lesson plan (No GUI): 
+
+1: tell how to play the game 
+2: tell them how to make the account
+3: tell them to make a new project
+#4: tell them how to make a list of words
+5: tell them how functions work and make a function to pick a random word
+#6: print the random word out and run code
+
+### Debug lesson - Break time
+(bonus: debugging session 5-10 mins)
+
+Objectives:
+
+- How to use import
+- How to use array object
+- How to use global variable
+- How to use random package
+- how to create a function
