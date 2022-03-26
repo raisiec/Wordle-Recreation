@@ -1,25 +1,26 @@
 # Authors: Kingsley + Raisie
-# Date: 19/3/2022
+# Date: 19/3/2022 & 26/3/2022
 # Topic: Wordle text-based lesson
 
 import random
 
+# You can change to other words
 words = ["there", "queen", "aloft", "dream", "raise"]
 
 # Create a function for choosing the random word
 def pickRandomWord():
   global answer
   answer = words[random.randint(0, len(words) - 1)]
-  print(answer)
+  #print(answer)
 
+# Check the input character with the correct answer
 def checkHint(guess, answer):
   for i in range(5):
     if (answer[i] == guess):
       return True
   return False
-
   
-#Raisie is making the CheckWord function now.
+# Check the input guess and the correct answer
 def checkWord():
   hint_list = ""
   for i in range(5): 
@@ -30,7 +31,6 @@ def checkWord():
     else:
       print("?") #Checking if its wrong
 
-
 lives = 3
 pickRandomWord() #Pick Random Word Before Guessing
 
@@ -38,6 +38,7 @@ for i in range(lives):
   print(lives)
   guess = input("Guess the five-letter word.")
 
+  # Call the check word function
   checkWord()
 
   if guess == answer:
