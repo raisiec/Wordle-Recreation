@@ -10,16 +10,35 @@ words = ["there", "queen", "aloft", "dream", "raise"]
 def pickRandomWord():
   global answer
   answer = words[random.randint(0, len(words) - 1)]
-
   print(answer)
+
+def checkHint(guess, answer):
+  for i in range(5):
+    if (answer[i] == guess):
+      return True
+  return False
+
   
-pickRandomWord()
+#Raisie is making the CheckWord function now.
+def checkWord():
+  hint_list = ""
+  for i in range(5): 
+    if (guess[i] == answer[i]): #'i' is a variable, it comes from the for-loop
+      print("*")
+    elif checkHint(guess[i], answer): # check if the char is on the answer list
+      print("o")
+    else:
+      print("?") #Checking if its wrong
+
 
 lives = 3
+pickRandomWord() #Pick Random Word Before Guessing
 
 for i in range(lives):
   print(lives)
   guess = input("Guess the five-letter word.")
+
+  checkWord()
 
   if guess == answer:
     print("Yes.")
